@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+    <h1>this is index</h1>
+<ul>
+    <li th:each="attributeName: ${studentList}" >
+            <span th:text="$attributeName.studentName"></span>
+        <span></span>
+        <span th:text="$attributeName.studentId"></span>
+    </li>
+</ul>
+</body>
+</html>
