@@ -3,27 +3,38 @@ package restapi.start.controller_package;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import restapi.start.interface_package.Student_repository;
+import restapi.start.service_package.FormDetail;
 import restapi.start.service_package.PuriStudent;
 import restapi.start.service_package.Student;
 
 import java.util.List;
 
 @Controller
-@RequestMapping("/api")
+@RequestMapping
 public class HtmlController {
-    @GetMapping("/s")
+    @GetMapping("/v")
+    public String v(){
+        return "vanya";
+    }
+
+    @PostMapping("/submit")
+    public String s(@ModelAttribute FormDetail formVariable,Model modelVariable){
+        System.out.println(formVariable.toString());
+//        we can also pass the formVariable to the addAttribute but
+//        we have to get the data from the formVariable by thymlef;
+        modelVariable.addAttribute("unamee",formVariable.getUmane());
+        modelVariable.addAttribute("pwordd",formVariable.getPword());
+        return "start";
+    }
+
+
+    @PutMapping("/s")
     public String index(){
         return "sumit";
     }
-    @GetMapping("/p")
-    public String s(){
-        return "start";
-    }
+
 //    @Autowired
 //    Student_repository stu;
 //    List<Student>studentList=stu.findAll();

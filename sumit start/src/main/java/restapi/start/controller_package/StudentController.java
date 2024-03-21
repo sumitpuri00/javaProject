@@ -32,8 +32,9 @@ public class StudentController {
     public List<Student> allStudent(){
 
 
-        return stu.findAll();
+//        return stu.findAll();
+        return studentRepositoryVariable.findAll();
     }
-vvvvvvv
+
 }
 
