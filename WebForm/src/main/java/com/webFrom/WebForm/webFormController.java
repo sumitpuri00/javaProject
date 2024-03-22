@@ -21,7 +21,12 @@ public class webFormController {
                 new employee("sum ","backend"),
                 new employee("vanya","frontend"),
                 new employee("luffy","catpain"),
-                new employee("zoro","swordsman")
+                new employee("zoro","swordsman"),
+                new employee("dragon","army"),
+                new employee("sum ","backend"),
+                new employee("dragon","army")
+
+
     );
 
 
@@ -34,12 +39,17 @@ public class webFormController {
     }
 
 
-    @PostMapping("/newEmployeeUrl")
-    public String dynamicAddData(@ModelAttribute employee employeeVariable){
+    @PostMapping("/url")
+    public String dynamicAddData(@ModelAttribute employee employeeVariable,Model modeladd){
 //        this.employeesData.add(employeeVariable);
-          this.employeesData.clear();
 //        System.out.println(Arrays.asList(employeeVariable));
-          return "redirect:/dynamic";
+            modeladd.addAttribute("newData",employeeVariable);
+//          return "redirect:/dynamic";
+        return "data";
 
+    }
+    @GetMapping("/p")
+    public String css(){
+        return "cssform";
     }
 }

@@ -16,7 +16,7 @@
            </li>
        </ul>
 
-        <form  th:object="${newEmployee}" th:action="@{/newEmployeeUrl}" method="POST">
+        <form  th:object="${newEmployee}" th:action="@{/url}" method="POST">
 
             <label for="eName">name:</label><br>
             <input type="text" th:field="*{name}" id="eName" ><br>

@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en"
-      xmlns:th="http://www.thymeleaf.org"
->
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>web page</title>
 
 </head>
 <body>
-        <h1>this is data page</h1>
+        <h1 >this is data page</h1>
+<!--        <ul>-->
+<!--            <li th:each="employee: ${newData}">-->
+<!--                <span th:text="${employee.name}"></span>-->
+<!--                <span></span>-->
+<!--                <span th:text="${employee.role}"></span>-->
+<!--            </li>-->
+<!--        </ul>-->
+
+        <h1>thi s</h1>
+        <ul th:each="employee: ${newData}">
+            <li th:text="${employee.name}"></li>
+            <li th:text="${employee.role}"></li>
+        </ul>
+
 
 </body>
 </html>
