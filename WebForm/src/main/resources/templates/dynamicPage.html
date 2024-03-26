@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-<html lang="en"
-      xmlns:th="http://www.thymeleaf.org"
->
+<html xmlns:th="http://www.thymeleaf.org" lang="en" >
 <head>
     <meta charset="UTF-8"/>
     <title>Title</title>
 </head>
 <body>
-        <h>this is dynamic</h>
-       <ul>
-           <li th:each="employee: ${employeeList}">
-               <span th:text="${employee.name}"></span>
-               <span></span>
-               <span th:text="${employee.role}"></span>
-           </li>
-       </ul>
+<h>this is dynamic</h>
+<ul>
+    <li th:each="employee: ${employeeList}">
+        <span th:text="${employee.name}"></span>
+        <span></span>
+        <span th:text="${employee.role}"></span>
+    </li>
+</ul>
 
-        <form  th:object="${newEmployee}" th:action="@{/url}" method="POST">
+<form th:object="${newEmployee}" th:action="@{/url}" method="post">
 
-            <label for="eName">name:</label><br>
-            <input type="text" th:field="*{name}" id="eName" ><br>
+    <label for="eName">name:</label><br>
+    <input type="text" th:field="*{name}" id="eName"><br>
 
-            <label for="eRole">role:</label><br>
-            <input type="text" th:field="*{role}" id="eRole" ><br><br>
-            <button type="submit">Submit</button>
-        </form>
+    <label for="eRole">role:</label><br>
+    <input type="text" th:field="*{role}" id="eRole"><br><br>
+    <button type="submit">Submit</button>
+</form>
 
 
 </body>

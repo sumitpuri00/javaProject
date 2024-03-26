@@ -3,11 +3,11 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>web page</title>
+    <title>data</title>
 
 </head>
 <body>
-        <h1 >this is data page</h1>
+
 <!--        <ul>-->
 <!--            <li th:each="employee: ${newData}">-->
 <!--                <span th:text="${employee.name}"></span>-->
@@ -22,6 +22,9 @@
             <li th:text="${employee.role}"></li>
         </ul>
 
+        <form th:action="@{/p}" method="get">
+            <button type="submit">Submit</button>
+        </form>
 
 </body>
 </html>

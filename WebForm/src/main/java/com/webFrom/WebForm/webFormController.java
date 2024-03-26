@@ -52,4 +52,29 @@ public class webFormController {
     public String css(){
         return "cssform";
     }
+
+    @GetMapping("/responsebody")
+    @ResponseBody
+    public String j(){
+        return "this is a @ResponseBody annotation any templates to this method";
+    }
+
+
+
+    @GetMapping("/json")
+    @ResponseBody
+    public List<employee>employeeJson(){
+        List<employee> employeesDataWithJson= Arrays.asList(
+                new employee("sum ","backend"),
+                new employee("vanya","frontend"),
+                new employee("luffy","catpain"),
+                new employee("zoro","swordsman"),
+                new employee("dragon","army"),
+                new employee("sum ","backend"),
+                new employee("dragon","army")
+
+
+        );
+        return employeesDataWithJson;
+    }
 }
