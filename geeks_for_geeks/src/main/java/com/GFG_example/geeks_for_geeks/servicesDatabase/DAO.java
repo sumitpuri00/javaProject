@@ -1,14 +1,14 @@
-package com.GFG_example.geeks_for_geeks.database;
+package com.GFG_example.geeks_for_geeks.servicesDatabase;
 
-import com.GFG_example.geeks_for_geeks.interfaces.OrderDataAccessInterface;
+import com.GFG_example.geeks_for_geeks.interfaces.DataServiceInterface;
 import com.GFG_example.geeks_for_geeks.model.OrderModel;
-import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-@Repository
-public class DAO implements OrderDataAccessInterface {
+//@Primary
+//@Repository
+public class DAO implements DataServiceInterface {
 //    why we are putting the cann data inside the constructor? find it ..
     List<OrderModel>orderList=new ArrayList<OrderModel>();
 
@@ -22,6 +22,13 @@ public class DAO implements OrderDataAccessInterface {
                 orderList.add(new OrderModel(7,"9K885955","beta",1,8666.85f));
     }
 
+
+    @Override
+    public List<OrderModel> getAllOrders() {
+        return orderList;
+    }
+
+
     @Override
     public OrderModel getById(long productId) {
         for(OrderModel orderModel :orderList){
@@ -32,12 +39,6 @@ public class DAO implements OrderDataAccessInterface {
         List<OrderModel>m= Arrays.asList(new OrderModel(0,"nulll","no Product",000,00));
         return m.get(0);
     }
-
-    @Override
-    public List<OrderModel> getAllOrders() {
-        return orderList;
-    }
-
     @Override
     public List<OrderModel> searchOrder(String search) {
         List<OrderModel>searchList=new ArrayList<>();

@@ -4,8 +4,8 @@ public class OrderModel {
     public long id;
     public String orderNo;
     public  String productName;
-    public int quantity;
     public float price;
+    public int quantity;
 
     public OrderModel(long id, String orderNo, String productName, int quantity, float price) {
         this.id = id;
