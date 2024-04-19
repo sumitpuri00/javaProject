@@ -18,6 +18,7 @@ public class FirstController {
         this.daoInterface=daoInterface;
     }
 
+
     @GetMapping("/getAll")
     public List<OrderModel> getAllData(){
         return daoInterface.getAllOrders();

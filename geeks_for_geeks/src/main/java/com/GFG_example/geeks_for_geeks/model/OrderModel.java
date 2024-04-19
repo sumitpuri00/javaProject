@@ -1,5 +1,9 @@
 package com.GFG_example.geeks_for_geeks.model;
 
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
+
+
 public class OrderModel {
     public long id;
     public String orderNo;

@@ -1,5 +1,6 @@
 package com.GFG_example.geeks_for_geeks;
 
+import com.GFG_example.geeks_for_geeks.model.OrderModel;
 import com.GFG_example.geeks_for_geeks.servicesDatabase.DAO;
 import com.GFG_example.geeks_for_geeks.servicesDatabase.OrderDataServiceSQL;
 import com.GFG_example.geeks_for_geeks.interfaces.DAOInterface;
@@ -18,6 +19,11 @@ public class SpringConfig {
     public DAOInterface secondBean(){
         return new OrderDataServiceSQL();
     }
+//
+//    @Bean(name = "orderModel")
+//    public OrderModel secondBean(){
+//        return new OrderModel();
+//    }
 
 
 }
