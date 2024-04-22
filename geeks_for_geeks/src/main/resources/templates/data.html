@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org"/>
+    <title>Title</title>
+</head>
+<body>
+<!--    <h1 th:text="${title}">j</h1>-->
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">ORDER ID</th>
+            <th scope="col">PRODUCT NAME</th>
+            <th scope="col">QUANTITY</th>
+            <th scope="col">PRICE</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="order: ${modelOrder}">
+            <td th:text="${order.id}">Mark</td>
+            <td th:text="${order.orderNo}">Mark</td>
+            <td th:text="${order.productName}">Mark</td>
+            <td th:text="${order.quantity}">Mark</td>
+            <td th:text="${order.price}">Mark</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+    <form th:action="@{/web/searchForm}" >
+        <input type="submit" value="search">
+    </form>
+</body>
+</html>

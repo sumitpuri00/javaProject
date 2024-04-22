@@ -18,9 +18,6 @@ public class OrderModel {
         this.quantity = quantity;
         this.price = price;
     }
-    public OrderModel(){
-
-    }
 
     @Override
     public String toString() {

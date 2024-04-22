@@ -4,20 +4,19 @@ import com.GFG_example.geeks_for_geeks.model.OrderModel;
 
 import java.util.List;
 
-public interface DataServiceInterface {
+public interface DataServiceInterface<T> {
 
 
 //    String print();
 //    void init();
 //    void destroy();
-
-    List<OrderModel> getAllOrders();
-    OrderModel getById(long productId);
-    List<OrderModel> searchOrder(String search);
+    public List<T> getAllOrders();
+    public T getById(long productId);
+    public List<T> searchOrder(String search);
     //    why addOne methods return type is long?
-    long addOne(OrderModel add);
-    boolean deleteOne(long id);
-    OrderModel update(OrderModel update,long id);
+    public long addOne(T add);
+    public boolean deleteOne(long id);
+    public T update(T update,long id);
 
 
 }

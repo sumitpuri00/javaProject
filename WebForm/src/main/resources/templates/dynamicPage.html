@@ -6,13 +6,16 @@
 </head>
 <body>
 <h>this is dynamic</h>
+
 <ul>
-    <li th:each="employee: ${employeeList}">
+    <li th:each="employee:${employeeList}">
         <span th:text="${employee.name}"></span>
         <span></span>
         <span th:text="${employee.role}"></span>
     </li>
+
 </ul>
+
 
 <form th:object="${newEmployee}" th:action="@{/url}" method="post">
 

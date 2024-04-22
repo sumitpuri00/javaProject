@@ -1,27 +1,37 @@
 package com.GFG_example.geeks_for_geeks.model;
+//this class is same as orderModel;
+//and this class work as bridge which connect our model to our database tablel;
 
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.Table;
 
-
-public class OrderModel {
+@Table("orders")
+public class EntityModel {
+    @Id
+    @Column("ID")
     public long id;
+    @Column("ORDER_NUMBER")
     public String orderNo;
+    @Column("PRODUCT_NAME")
     public  String productName;
+    @Column("PRICE")
     public float price;
+    @Column("QTY")
     public int quantity;
 
-    public OrderModel(long id, String orderNo, String productName, int quantity, float price) {
+    public EntityModel(long id, String orderNo, String productName, int quantity, float price) {
         this.id = id;
         this.orderNo = orderNo;
         this.productName = productName;
         this.quantity = quantity;
         this.price = price;
     }
-    public OrderModel(){
+
+//    we need a parameterless constructor for mapping library , we will use later;
+    public EntityModel(){
 
     }
-
     @Override
     public String toString() {
         return "OrderModel{" +

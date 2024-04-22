@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 //@Primary
 //@Repository
-public class DAO implements DataServiceInterface <OrderModel>{
+public class DAO implements DataServiceInterface {
 //    why we are putting the cann data inside the constructor? find it ..
     List<OrderModel>orderList=new ArrayList<OrderModel>();
 

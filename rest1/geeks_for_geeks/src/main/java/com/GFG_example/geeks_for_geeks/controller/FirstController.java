@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("/sumit")
 public class FirstController {
 
-    DAOInterface<OrderModel> daoInterface;
+    DAOInterface daoInterface;
 
     @Autowired
     public FirstController(DAOInterface daoInterface){

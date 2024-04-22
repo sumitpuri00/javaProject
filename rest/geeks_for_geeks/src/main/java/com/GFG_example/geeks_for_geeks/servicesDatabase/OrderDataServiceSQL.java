@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class OrderDataServiceSQL implements DAOInterface <OrderModel>{
+public class OrderDataServiceSQL implements DAOInterface {
 //    this is for the connection with the database through the property we have defined in application property file;
     @Autowired
     DataSource dataSource;

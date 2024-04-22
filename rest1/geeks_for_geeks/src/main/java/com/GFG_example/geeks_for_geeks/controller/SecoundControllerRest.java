@@ -12,8 +12,7 @@ import java.util.List;
 @RequestMapping("/api")
 public class SecoundControllerRest {
 
-    DataServiceInterface<OrderModel> dataService;
-
+    DataServiceInterface dataService;
     @Autowired
     public SecoundControllerRest(DataServiceInterface service) {
         this.dataService = service;
